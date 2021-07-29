@@ -1,0 +1,70 @@
+
+/*Media Query for XS screen*/
+@media (max-width: 767px) {
+    .menu{
+        right: 0;
+        left: 0;
+    }
+    nav .social-list ul li{
+        margin: 0;
+    }
+    nav .social-list ul li a{
+        font-size: 24px;
+    }
+    .welcome{
+        margin: 80px 0;
+    }
+    .img-animation{
+        text-align: center;
+    }
+    .img-who{
+        margin: 50px 0;
+    }
+    .inner-slider{
+        height: 740px;
+    }
+    .slider-svg-2{
+        margin-top: -10px;
+    }
+    .contact h2{
+        font-size: 35px;
+        margin-left: 23px;
+    }
+    .contact form{
+        width: 80%;
+        margin-left: 10%;
+    }
+}
+@media (min-width: 320px) and (max-width: 375px){
+    nav .social-list ul li a{
+        font-size: 14px;
+        line-height: 3.5;
+    }
+    .inner-slider{
+        height: 800px;
+    }
+    .contact h2{
+        font-size: 33px;
+        margin-left: 0;
+    }
+}
+@media (max-width: 320px){
+    .contact h2{
+        font-size: 29px;
+        margin-left: 0;
+    }
+}
+
+/*Media Query for S screen*/
+@media (min-width: 768px) and (max-width: 991px) {
+    .slider-svg-2{
+        margin-top: -10px;
+    }
+}
+
+/*Media Query for Med screen*/
+@media (min-width: 992px) and (max-width: 1199px) {
+    .slider-svg-2{
+        margin-top: -10px;
+    }
+}
