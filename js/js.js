@@ -4,14 +4,13 @@ var scroll = new SmoothScroll('a[href*="#"]', {
 });
 
 $(function () {
-	//make nice scroll
-	$("html").niceScroll();
-	//Menue
-	$(".menu, .menu-btn").click(function () {
+	//Menu
+	$("header").height($(window).height())
+	$(".menu-btn").click(function () {
 		$(".popup-menu").css("top", "0");
 	})
 	$(".popup-menu .container i").click(function () {
-		$(".popup-menu").css("top", "-100%");
+		$(".popup-menu").css("top", "-150%");
 	})
 	// Gallery Section
 	var selectedClass = "";
@@ -51,7 +50,7 @@ $(function () {
 	})
 
 	// Stats Section
-	/* 	$(".count").each(function(){
+/* 		$(".count").each(function(){
 				var $this = $(this);
 				jQuery({counter: 0}).animate({
 					counter: $this.text()
@@ -64,22 +63,40 @@ $(function () {
 				})
 			})  */
 });
-var spans = document.querySelectorAll("span.count");
+window.onscroll = function(){
 
-spans.forEach(span => {
-	var num = 1;
-	var number = +span.getAttribute("data-target");
-	
-	var interval = setInterval(inc, 10);
-	function inc() {
-		span.textContent = ++num
-		if (number == num) {
-			clearInterval(interval)
+	if (window.scrollY > 3200) {
+		var spans = document.querySelectorAll("span.count");
+		
+		spans.forEach(span => {
+			const counter = () => {
+			var speed = 5000;
+			const number = + span.getAttribute("data-target");
+			const spanContent = + span.textContent;
+
+			const frame = number / speed
+			if (spanContent < number){
+				span.innerText = Math.ceil(frame + spanContent)
+				setTimeout(counter, 15)
+			}else{
+				span.innerText = number;
+			}
 		}
+		counter()
+		})
 	}
-})
 
+/* 			function inc() {
+				span.textContent = ++count
+				if (number === count) {
+					clearInterval(interval);
+				}
+			}
+			var interval = setInterval(inc, 2);
+		})  */
+
+} 
 //loading Section
-$(window).on("load", function () {
+/* $(window).on("load", function () {
 	$(".loading").fadeOut(1000)
-})
+}) */
