@@ -149,6 +149,9 @@ nav .social-list ul li a {
 
 /*=================*/
 /* landing */
+header{
+    padding-bottom: 130px;
+}
 .welcome {
     color: #00557b;
 }
@@ -289,8 +292,11 @@ nav .social-list ul li a {
 .slider {
     padding: 10px 0;
     background-color: #0099ff;
+    overflow: hidden;
 }
-
+.slider .cont-trigger{
+    overflow: hidden;
+}
 .slider .cont-trigger .trigger {
     padding: 0px 10px;
     background-color: #FFF;
@@ -302,6 +308,7 @@ nav .social-list ul li a {
     -moz-transition: .3s;
     -ms-transition: .3s;
     -o-transition: .3s;
+    overflow: hidden;
 }
 
 .slider .cont-trigger .active {

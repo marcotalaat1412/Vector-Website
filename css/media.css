@@ -26,6 +26,9 @@
     .slider-svg-2{
         margin-top: -10px;
     }
+    .stats-inner{
+        width: 50%;
+    }
     .contact h2{
         font-size: 35px;
         margin-left: 23px;
@@ -60,6 +63,15 @@
     .slider-svg-2{
         margin-top: -10px;
     }
+    .inner-slider{
+        height: 740px;
+    }
+    .slider-svg-2{
+        margin-top: -10px;
+    }
+    .inner-slider div{
+        text-align: center;
+    }
 }
 
 /*Media Query for Med screen*/
@@ -67,4 +79,5 @@
     .slider-svg-2{
         margin-top: -10px;
     }
+    
 }
